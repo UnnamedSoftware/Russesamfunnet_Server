@@ -19,20 +19,5 @@
 	
 	<!-- Configures the @Controller programming model -->
 	<mvc:annotation-driven />
-
-	<!-- Forwards "/" to the redirect jsp -->
-	<!-- <mvc:view-controller path="/" view-name="redirect"/> -->
-
-	<!-- Resolves view names to protected .jsp resources within the /WEB-INF/views directory -->
-	<!--  <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/jsp/"/>
-		<property name="suffix" value=".jsp"/>
-	</bean>-->
-	
-	<!-- TODO: -->
-	<!-- Add support for reading web resources: css, js -->
-	<!--  <mvc:resources location="/filer/" mapping="/filer/**"></mvc:resources> -->
-	
-	
 	
 </beans>

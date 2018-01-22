@@ -18,15 +18,11 @@ import no.ntnu.unnamedSoftware.Service.UserService;
 
 
 @Controller
+@RequestMapping("/user")
 public class UserController {
 	
+	@Autowired
 	private UserService userService;
-	
-	public UserController()
-	{
-		userService = new UserService();
-		
-	}
 	
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -41,18 +37,20 @@ public class UserController {
     }
 	
 	
-	
 	@RequestMapping("/schools")
 	@Transactional
-	public School getSchools() {
+	public String getSchools() {
+		System.out.println("Hello?");
 		Session currentSession = sessionFactory.openSession();
 		
 		Query theQuery = currentSession.
 				createQuery("from School s"); 
 		
 		List<School> userInfo = theQuery.list();
+		System.out.println(userInfo.size());
 		School s = userInfo.get(0);
-		return s;
+		System.out.println(s.getSchoolName());
+		return s.getSchoolName();
 	}
 
 
