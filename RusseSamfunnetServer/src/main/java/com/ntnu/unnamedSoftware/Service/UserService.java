@@ -4,20 +4,20 @@ import java.awt.List;
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Service;
-import no.ntnu.unnamedSoftware.Entities.User;
+
+import no.ntnu.unnamedSoftware.Entities.Russ;
 
 @Service
 public class UserService {
 	
-	private ArrayList<User> users;
+	private ArrayList<Russ> users;
 	
 	public UserService() {
 		this.users = new ArrayList<>();
-		users.add(new User("Øystein"));
 	}
 	
 	
-	public ArrayList<User> getUsers()
+	public ArrayList<Russ> getRuss()
 	{		
 		return users;
 	}

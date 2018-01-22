@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.ntnu.unnamedSoftware.Service.UserService;
 
-import no.ntnu.unnamedSoftware.Entities.User;
+import no.ntnu.unnamedSoftware.Entities.Russ;
+
 
 @Controller
 public class UserController {
@@ -21,10 +22,10 @@ public class UserController {
 	}
 	
 	@RequestMapping("/users")
-    public ArrayList<User> getUsers()
+    public ArrayList<Russ> getUsers()
     {
-		ArrayList<User> users = new ArrayList<>();
-		users = userService.getUsers();
+		ArrayList<Russ> users = new ArrayList<>();
+		users = userService.getRuss();
 		
 		return users;
     }
