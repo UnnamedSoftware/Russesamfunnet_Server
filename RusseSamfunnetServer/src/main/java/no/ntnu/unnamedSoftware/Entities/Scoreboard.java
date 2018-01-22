@@ -2,7 +2,10 @@ package no.ntnu.unnamedSoftware.Entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Scoreboard {
@@ -12,6 +15,8 @@ public class Scoreboard {
 	private Integer scoreboardID;
 	
 	@Column(name="russ_id")
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "userID_id", nullable = false)
 	private Integer userID;
 	
 	@Column(name="points")

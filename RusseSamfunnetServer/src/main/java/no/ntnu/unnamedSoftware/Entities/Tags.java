@@ -1,8 +1,13 @@
 package no.ntnu.unnamedSoftware.Entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Tags {
@@ -11,10 +16,12 @@ public class Tags {
 	@Column(name="tag_id")
 	private Integer tagID;
 	
-	@Column(name="feed_id")
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "feedID_id", nullable = false)
 	private Integer feedID;
 	
-	@Column(name="russ_id")
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "userID_id", nullable = false)
 	private Integer userID;
 	
 	public Tags() {
