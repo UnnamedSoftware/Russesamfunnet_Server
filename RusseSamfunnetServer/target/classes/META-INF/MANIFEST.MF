@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: RusseSamfunnetServer
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: Kristian
+Built-By: HallvardPC
 Implementation-Vendor-Id: no.ntnu.unnamedSoftware
-Build-Jdk: 1.8.0_65
+Build-Jdk: 1.8.0_144
 Implementation-URL: http://projects.spring.io/spring-boot/RusseSamfunn
  etServer/
 Created-By: Maven Integration for Eclipse
