@@ -5,6 +5,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -16,13 +18,22 @@ public class User {
 	@Column(name="user_id")
 	private Integer userID;
 	
-	
-	@OneToMany(fetch = FetchType.EAGER,mappedBy="school",cascade = CascadeType.ALL)
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "schoolID_id", nullable = false)
 	private Integer schoolID;
 	
-	@OneToMany(fetch = FetchType.EAGER,mappedBy="zone",cascade = CascadeType.ALL)
-	private String zoneID;
+	@Column(name="russ_status")
+	private String status;
 	
+	public String getStatus() {
+		return status;
+	}
+
+
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	@Column(name="email")
 	private String email;
 	@Column(name="first_name")
@@ -60,12 +71,6 @@ public class User {
 	}
 	public void setSchoolID(Integer schoolID) {
 		this.schoolID = schoolID;
-	}
-	public String getZoneID() {
-		return zoneID;
-	}
-	public void setZoneID(String zoneID) {
-		this.zoneID = zoneID;
 	}
 	public String getEmail() {
 		return email;

@@ -3,15 +3,19 @@ package no.ntnu.unnamedSoftware.Entities;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class School {
 
 	@Id
 	@Column(name="school_id")
-	@ManyToOne(cascade= CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL,
+    fetch = FetchType.LAZY,
+    mappedBy = "schoolID")
 	private Integer schoolID;
 	
 	

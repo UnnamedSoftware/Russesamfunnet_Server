@@ -11,8 +11,15 @@ public class Feed {
 	@Column(name="feed_id")
 	private Integer feedID;
 	
-	@Column(name ="user_id")
+	@Column(name ="russ_id")
+	
 	private Integer userID;
+	
+	@Column(name = "zone")
+	private String zone;
+	
+	@Column(name="school_id")
+	private String schoolID;
 	
 	@Column(name = "message")
 	private String message;
