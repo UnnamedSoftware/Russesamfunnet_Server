@@ -1,4 +1,4 @@
-package com.ntnu.unnamedSoftware.controller;
+package no.ntnu.unnamedSoftware.controller;
 
 import org.springframework.stereotype.Controller;
 

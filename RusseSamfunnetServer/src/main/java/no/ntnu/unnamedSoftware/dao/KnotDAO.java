@@ -1,4 +1,4 @@
-package com.ntnu.unnamedSoftware.dao;
+package no.ntnu.unnamedSoftware.dao;
 
 import org.springframework.stereotype.Repository;
 

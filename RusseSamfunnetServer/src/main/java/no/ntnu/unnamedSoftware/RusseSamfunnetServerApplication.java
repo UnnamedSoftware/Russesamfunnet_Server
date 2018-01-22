@@ -1,4 +1,4 @@
-package com.ntnu.unnamedSoftware;
+package no.ntnu.unnamedSoftware;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.ntnu.unnamedSoftware.Service;
+package no.ntnu.unnamedSoftware.Service;
 
 import org.springframework.stereotype.Service;
 
